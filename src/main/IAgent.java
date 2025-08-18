@@ -1,3 +1,5 @@
+package main;
+
 // This interface has all the agent methods you'll need to do this exercise.
 // You should not implement the interface.
 public interface IAgent {

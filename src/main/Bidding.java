@@ -1,6 +1,8 @@
+package main;
+
 import java.util.*;
 
-class Bidding {
+public class Bidding {
     private final Map<IAgent, Integer> bids = new HashMap<>();
     private final List<IAgent> activeAgents = new ArrayList<>();
     private final Set<IAgent> hasBid = new HashSet<>();
