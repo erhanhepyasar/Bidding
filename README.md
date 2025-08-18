@@ -1,4 +1,4 @@
-main.Bidding Project
+The Bidding Project
 
 Run the test.BiddingTest::main file to see the sample output like below:
 
