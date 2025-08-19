@@ -11,20 +11,20 @@ public class Bidding {
     }
 
     public void run() {
-        System.out.println("=== Bidding Start ===");
+        log("=== Bidding Start ===");
         int round = 1;
 
         do {
             if (activeAgents.isEmpty()) break;
 
-            System.out.println("\n--- Round " + round++ + " ---");
+            log("\n--- Round " + round++ + " ---");
             printBids();
             executeRound();
         } while (!allAtHighest());
 
-        System.out.println("\n=== Bidding End ===");
+        log("\n=== Bidding End ===");
         printBids();
-        System.out.println("Winners: " + winnersAsString());
+        log("Winners: " + winnersAsString());
     }
 
     private void executeRound() {
@@ -77,19 +77,19 @@ public class Bidding {
     private void printBids() {
         System.out.print("Current bids: ");
         activeAgents.forEach(a -> System.out.print("Agent " + a.id() + "=" + bids.get(a) + "  "));
-        System.out.println();
+        log("");
     }
 
     private void logStay(IAgent agent) {
-        System.out.println("Agent " + agent.id() + " stays at " + bids.get(agent));
+        log("Agent " + agent.id() + " stays at " + bids.get(agent));
     }
 
     private void logRaise(IAgent agent) {
-        System.out.println("Agent " + agent.id() + " raises to " + bids.get(agent));
+        log("Agent " + agent.id() + " raises to " + bids.get(agent));
     }
 
     private void logWithdraw(IAgent agent) {
-        System.out.println("Agent " + agent.id() + " withdraws.");
+        log("Agent " + agent.id() + " withdraws.");
     }
 
     private String winnersAsString() {
@@ -97,5 +97,9 @@ public class Bidding {
                 .map(a -> "Agent " + a.id())
                 .reduce((a, b) -> a + " " + b)
                 .orElse("None");
+    }
+
+    private void log(String msg) {
+        System.out.println(msg);
     }
 }
