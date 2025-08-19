@@ -1,6 +1,6 @@
 The Bidding Project
 
-Run the test.BiddingTest::main file to see the sample output like below:
+Run the BiddingTest::main file to see the sample output like below:
 
 === Bidding Start ===
 

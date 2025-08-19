@@ -1,8 +1,3 @@
-package test;
-
-import main.Bidding;
-import main.IAgent;
-
 import java.util.Arrays;
 import java.util.List;
 
